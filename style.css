@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: rgb(84, 73, 73);
+}
+
+.calculator{
+    /* height: 50vh; */
+    width: 40vw;
+    background-color: rgb(22, 22, 21);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+   
+}
+.calculator input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color:rgb(248, 244, 244);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.buttons{
+    
+    display: grid;
+            grid-template-columns:1fr 1fr 1fr 1.2fr;
+            gap: 10px;
+            
+
+}
+.buttons button{
+    font-size: 1.2rem;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+}
+.calculator button:hover {
+    background-color: #ddd;
+}
+.calculator .buttons button:nth-child(4n) {
+    background-color: pink;
+}
+@media screen and (max-width:370px) {
+    .buttons button{
+        font-size: 1.2rem;
+                padding: 5px;
+                border: none;
+                border-radius: 5px;
+    }
+}
+.onoff{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 5px;
+}
+.switch-container {
+    display: inline-block;
+    position: relative;
+  }
+
+  .toggle-input {
+    display: none;
+  }
+
+  .toggle-label {
+    display: block;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s; /* Added transition for background-color */
+  }
+
+  .toggle-inner {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #888;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.2s;
+  }
+
+  .toggle-switch {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    transition: left 0.2s;
+  }
+
+  input[type="checkbox"]:checked + .toggle-label {
+    background-color: green; /* Background color when switch is ON */
+  }
+
+  input[type="checkbox"]:checked + .toggle-label .toggle-inner {
+    transform: translateX(20px);
+  }
+
+  input[type="checkbox"]:checked + .toggle-label .toggle-switch {
+    left: 21px;
+  }
